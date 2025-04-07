@@ -1,4 +1,5 @@
 from DNAToolkit import *
-from mendel import *
-mendel("test_data/rosalind_iprb.txt")
+from structures import *
+
+genetic_code("test_data/rosalind_prot.txt")
 

@@ -14,11 +14,11 @@ AminoAcidsCodesDNA = {
     'TTG': 'L',    # Leucina
     'TAC': 'Y',    # Tirosina
     'TAT': 'Y',    # Tirosina
-    'TAA': '*',    # Stop
-    'TAG': '*',    # Stop
+    'TAA': 'Stop',    # Stop
+    'TAG': 'Stop',    # Stop
     'TGC': 'C',    # Cisteina
     'TGT': 'C',    # Cisteina
-    'TGA': '*',    # Stop
+    'TGA': 'Stop',    # Stop
     'TGG': 'W',    # Triptofano
     'CTA': 'L',    # Leucina
     'CTC': 'L',    # Leucina
@@ -70,69 +70,38 @@ AminoAcidsCodesDNA = {
     'GGT': 'G'     # Glicina
 }
 
-AminoAcidsCodesRNA = {
-    'UCA': 'S',    # Serina
-    'UCC': 'S',    # Serina
-    'UCG': 'S',    # Serina
-    'UCU': 'S',    # Serina
-    'UUC': 'F',    # Fenilalanina
-    'UUU': 'F',    # Fenilalanina
-    'UUA': 'L',    # Leucina
-    'UUG': 'L',    # Leucina
-    'UAC': 'Y',    # Tirosina
-    'UAU': 'Y',    # Tirosina
-    'UAA': '*',    # Stop
-    'UAG': '*',    # Stop
-    'UGC': 'C',    # Cisteina
-    'UGU': 'C',    # Cisteina
-    'UGA': '*',    # Stop
-    'UGG': 'W',    # Triptofano
-    'CUA': 'L',    # Leucina
-    'CUC': 'L',    # Leucina
-    'CUG': 'L',    # Leucina
-    'CUU': 'L',    # Leucina
-    'CCA': 'P',    # Prolina
-    'CCC': 'P',    # Prolina
-    'CCG': 'P',    # Prolina
-    'CCU': 'P',    # Prolina
-    'CAC': 'H',    # Histidina
-    'CAU': 'H',    # Histidina
-    'CAA': 'Q',    # Glutamina
-    'CAG': 'Q',    # Glutamina
-    'CGA': 'R',    # Arginina
-    'CGC': 'R',    # Arginina
-    'CGG': 'R',    # Arginina
-    'CGU': 'R',    # Arginina
-    'AUA': 'I',    # Isoleucina
-    'AUC': 'I',    # Isoleucina
-    'AUU': 'I',    # Isoleucina
-    'AUG': 'M',    # Methionina
-    'ACA': 'T',    # Treonina
-    'ACC': 'T',    # Treonina
-    'ACG': 'T',    # Treonina
-    'ACU': 'T',    # Treonina
-    'AAC': 'N',    # Asparagina
-    'AAU': 'N',    # Asparagina
-    'AAA': 'K',    # Lisina
-    'AAG': 'K',    # Lisina
-    'AGC': 'S',    # Serina
-    'AGU': 'S',    # Serina
-    'AGA': 'R',    # Arginina
-    'AGG': 'R',    # Arginina
-    'GUA': 'V',    # Valina
-    'GUC': 'V',    # Valina
-    'GUG': 'V',    # Valina
-    'GUU': 'V',    # Valina
-    'GCA': 'A',    # Alanina
-    'GCC': 'A',    # Alanina
-    'GCG': 'A',    # Alanina
-    'GCU': 'A',    # Alanina
-    'GAC': 'D',    # Acido Aspartico
-    'GAU': 'D',    # Acido Aspartico
-    'GAA': 'E',    # Acido Glutamico
-    'GAG': 'E',    # Acido Glutamico
-    'GGA': 'G',    # Glicina
-    'GGC': 'G',    # Glicina
-    'GGG': 'G',    # Glicina
-    'GGU': 'G'     # Glicina
+rna_codon_table = {
+    'UUU': 'F', 'UUC': 'F',
+    'UUA': 'L', 'UUG': 'L',
+    'CUU': 'L', 'CUC': 'L',
+    'CUA': 'L', 'CUG': 'L',
+    'AUU': 'I', 'AUC': 'I',
+    'AUA': 'I', 'AUG': 'M',  # Startcodon
+    'GUU': 'V', 'GUC': 'V',
+    'GUA': 'V', 'GUG': 'V',
+    'UCU': 'S', 'UCC': 'S',
+    'UCA': 'S', 'UCG': 'S',
+    'CCU': 'P', 'CCC': 'P',
+    'CCA': 'P', 'CCG': 'P',
+    'ACU': 'T', 'ACC': 'T',
+    'ACA': 'T', 'ACG': 'T',
+    'GCU': 'A', 'GCC': 'A',
+    'GCA': 'A', 'GCG': 'A',
+    'UAU': 'Y', 'UAC': 'Y',
+    'UAA': 'Stop', 'UAG': 'Stop',
+    'CAU': 'H', 'CAC': 'H',
+    'CAA': 'Q', 'CAG': 'Q',
+    'AAU': 'N', 'AAC': 'N',
+    'AAA': 'K', 'AAG': 'K',
+    'GAU': 'D', 'GAC': 'D',
+    'GAA': 'E', 'GAG': 'E',
+    'UGU': 'C', 'UGC': 'C',
+    'UGA': 'Stop',
+    'UGG': 'W',
+    'CGU': 'R', 'CGC': 'R',
+    'CGA': 'R', 'CGG': 'R',
+    'AGU': 'S', 'AGC': 'S',
+    'AGA': 'R', 'AGG': 'R',
+    'GGU': 'G', 'GGC': 'G',
+    'GGA': 'G', 'GGG': 'G'
 }

@@ -1,5 +1,5 @@
 # DNA Toolkyt
-
+from structures import *
 
 Nucleotides = ["A", "C", "G", "T", "U"]
 
@@ -92,3 +92,15 @@ def pointmutation(filename):
          if seq1[i] != seq2[i]:
              n = n + 1
      print(n)
+
+def genetic_code(filename):
+    peptidkette = ""
+    with open(filename, 'r') as file:
+        line = file.readline()
+    triplett = [line[i:i+3] for i in range(0, len(line), 3)]
+    for i in range(0, len(triplett)):
+        if rna_codon_table[triplett[i]] == 'Stop':
+            print(peptidkette)
+            return
+        peptidkette += rna_codon_table[triplett[i]]
+    print(peptidkette)
