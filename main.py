@@ -1,4 +1,4 @@
 from DNAToolkit import *
-
-pointmutation("test_data/rosalind_hamm.txt")
+from mendel import *
+mendel("test_data/rosalind_iprb.txt")
 

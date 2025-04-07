@@ -1,7 +1,6 @@
 # DNA Toolkyt
 
 
-
 Nucleotides = ["A", "C", "G", "T", "U"]
 
 # überprüfe, ob Sequenz DNA String ist
@@ -74,6 +73,7 @@ def gccontent(filename):
         print(header)
         print((seq.count('G') + seq.count('C')) / len(seq) * 100)
 
+#wenn eine .txt nur per Zeilenumbruch Sequenzen
 def parse_sequences(filename):
     sequence = {}
     with open(filename, 'r') as file:
