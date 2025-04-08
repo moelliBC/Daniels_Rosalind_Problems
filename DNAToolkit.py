@@ -1,5 +1,6 @@
 # DNA Toolkyt
 from structures import *
+from parsers import *
 
 Nucleotides = ["A", "C", "G", "T", "U"]
 
@@ -49,22 +50,6 @@ def complementDNA(seq):
     revComplString = ComplString[::-1]
     return revComplString
 
-#soll fasta format in header und sequence ausgeben
-def parse_fasta(filename):
-    """
-    A simple generator function to read a FASTA file and yield tuples of
-    (header, sequence_string).
-    """
-    fastasequence = {}
-    with open(filename, 'r') as file:
-        for line in file:
-            line = line.strip()
-            if line.startswith('>'):
-                header = line[1:]
-                fastasequence[header] = ""
-            else:
-                fastasequence[header] += line
-        return(fastasequence)
 
 #gibt den GC-Anteil von einem Genom im FASTA-Format aus
 def gccontent(filename):
@@ -73,15 +58,6 @@ def gccontent(filename):
         print(header)
         print((seq.count('G') + seq.count('C')) / len(seq) * 100)
 
-#wenn eine .txt nur per Zeilenumbruch Sequenzen
-def parse_sequences(filename):
-    sequence = {}
-    with open(filename, 'r') as file:
-        for i, line in enumerate(file, start=1):
-            line = line.strip()
-            sequence[i] = []
-            sequence[i] += line
-        return(sequence)
 
 def pointmutation(filename):
      sequences = parse_sequences(filename)
