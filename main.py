@@ -1,5 +1,7 @@
 from DNAToolkit import *
+from rabbits import *
 from structures import *
 
-consensus_finder("test_data/rosalind_cons.txt")
+rabbits = solve_mortal_rabbits(85, 20)
+print(rabbits)
 
