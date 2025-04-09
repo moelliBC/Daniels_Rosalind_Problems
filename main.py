@@ -1,5 +1,5 @@
 from DNAToolkit import *
 from structures import *
 
-genetic_code("test_data/rosalind_prot.txt")
+consensus_finder("test_data/rosalind_cons.txt")
 
